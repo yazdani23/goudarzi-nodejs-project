@@ -1,0 +1,25 @@
+user:  read(product(filter(brand, price, )), search(brand, title, catgory)) 
+catgory(superCat, subCat)
+manage (cart), (comment, wishList,compration)
+admin: manage (product, user, catgory,   comment, wishList,compration, analist )
+
+
+
+// database:
+entities:
+product,
+user (admin, user),??????????????????????? (model mongoose)
+catgory,
+comment
+
+
+tables:
+
+products,
+users,
+orders,
+wishLists,
+comments,
+
+catgories,
+subCats

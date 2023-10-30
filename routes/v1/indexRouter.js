@@ -1,0 +1,22 @@
+const express = require("express")
+const router = express.Router()
+const authRouter=require("./authRouter")
+const productRouter = require("./productRouter")
+const userRouter = require("./userRouter")
+const {index, route404 } = require("../../controllers/indexController")
+const categoryRouter = require("./categoryRouter")
+const orderRouter = require("./orderRouter")
+const teacherRouter = require("./teacherRouter")
+const studentRouter = require("./studentRouter")
+
+router.use(authRouter)
+router.use(productRouter)
+router.use(userRouter)
+router.use(categoryRouter)
+router.use(orderRouter)
+router.use(teacherRouter)
+router.use(studentRouter)
+router.get("/", index)
+router.get("/*", route404)
+
+module.exports= router
